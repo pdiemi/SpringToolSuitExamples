@@ -74,3 +74,108 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.ui 2 2 2020-12-30 14:48:02.886
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:11.574
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:11.582
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@61ce90ad[org.springframework.tooling.boot.ls:1.24.0.202012131915(id=578)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:11.599
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:12.253
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:15.342
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:15.349
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@61ce90ad[org.springframework.tooling.boot.ls:1.24.0.202012131915(id=578)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:15.357
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.757
+!MESSAGE Boot LS startup time from start to initialized: 4391ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.873
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.IlaYDSJxisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.887
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.899
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.910
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.920
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.IlaYDSJx => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.930
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.954
+!MESSAGE classpath=73 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.970
+!MESSAGE buffering callback sts4.classpath.IlaYDSJx springBoot false 73
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:19.979
+!MESSAGE executing callback sts4.classpath.IlaYDSJx 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 00:55:20.265
+!MESSAGE executing callback sts4.classpath.IlaYDSJx SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:39.061
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:39.074
+!MESSAGE classpath=78 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:39.084
+!MESSAGE buffering callback sts4.classpath.IlaYDSJx springBoot false 78
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:39.092
+!MESSAGE executing callback sts4.classpath.IlaYDSJx 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:39.108
+!MESSAGE executing callback sts4.classpath.IlaYDSJx SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:44.442
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:44.459
+!MESSAGE classpath=78 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:44.475
+!MESSAGE buffering callback sts4.classpath.IlaYDSJx springBoot false 78
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:44.485
+!MESSAGE executing callback sts4.classpath.IlaYDSJx 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-31 01:01:44.504
+!MESSAGE executing callback sts4.classpath.IlaYDSJx SUCCESS [done]
+
+!ENTRY org.eclipse.jface 2 0 2020-12-31 01:08:27.888
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-12-31 01:08:27.888
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@554bb85d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@36f04db,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
