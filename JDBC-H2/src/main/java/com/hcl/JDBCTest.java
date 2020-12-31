@@ -28,6 +28,14 @@ public class JDBCTest {
 		
 		
 		st.execute("update emp set ename='xyz' where eno=2");
+		/* 
+		 * SQL injection
+		 * use "update emp set ename=? where eno=2" instead to avoid
+		 * data being thief. 
+		 * 
+		 * in other words, use prepared statement instead
+		 * */
+		
 		
 		st.execute("delete from emp where eno=4");
 		conn.commit();
