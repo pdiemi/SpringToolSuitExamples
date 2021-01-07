@@ -20,7 +20,7 @@ public class EmployeeController {
 	@PostMapping("/addemp")
 	public String newEmp(Employee emp) {
 		repo.save(emp);
-		return "redirect:/save";
+		return "redirect:/listemp";
 	}
 	
 	@GetMapping("/addemp")
@@ -28,8 +28,8 @@ public class EmployeeController {
 		Employee emp = new Employee();
 		/*
 		 * newemp: jsp end-point
-		 * form: name of the form
-		 * emp: 
+		 * form: name of the form in jsp
+		 * emp: oject
 		 * */
 		return new ModelAndView("newEmp","form", emp);
 	}
