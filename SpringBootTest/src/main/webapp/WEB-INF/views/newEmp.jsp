@@ -13,7 +13,7 @@
 	<h1>Add New Employee</h1>
 
 	<form:form modelAttribute="form">
-		<form:error path="" element="div"/>
+		<form:errors path="" element="div"/>
 		<div>
 			<!-- Spring form -->
 			<form:label path="name">Employee Name</form:label>
@@ -23,7 +23,7 @@
 
 		<div>
 			<!-- Normal submit form -->
-			<input type="submit value=" Add Employee"/>
+			<input type="submit" value="Add Employee"/>
 		</div>
 
 	</form:form>
