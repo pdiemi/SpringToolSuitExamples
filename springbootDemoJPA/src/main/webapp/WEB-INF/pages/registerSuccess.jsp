@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login Success</title>
+<title>Register Success</title>
 </head>
 <body>
-<h1>Dash board</h1>
-Login successful
+<h1>Welcome</h1>
+Register successful 
 </body>
 </html>
