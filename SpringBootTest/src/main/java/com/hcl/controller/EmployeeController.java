@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hcl.dao.EmpRepository;
@@ -38,5 +40,19 @@ public class EmployeeController {
 	public ModelAndView listEmp() {
 		List<Employee> allEmps = (List<Employee>) repo.findAll();
 		return new ModelAndView("emps","employees", allEmps);
+	}
+	
+	@PutMapping("/updateemp/{id}")
+	public ModelAndView updateEmp(@PathVariable("id") long id) {
+		ModelAndView mv = new ModelAndView("edit");
+		Employee emp = repo.findById(id).get();
+		mv.addObject("emp",emp);
+		return mv;
+	}
+	
+	@PutMapping("/deleteemp/{id}")
+	public String deleteEmp(@PathVariable("id") long id) {
+		repo.deleteById(id);
+		return "redirect:/listemp";
 	}
 }
