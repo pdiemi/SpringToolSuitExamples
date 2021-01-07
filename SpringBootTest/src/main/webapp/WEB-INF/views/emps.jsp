@@ -11,7 +11,7 @@
 <body>
 <h1 style="color:blue"><marquee behavior="alternate">List of Employees</marquee></h1>
 	<ul>
-		<c:forEach items="employees" var="emps">
+		<c:forEach items="${employees}" var="emps">
 			<li>${emps.id}</li>
 			<li>${emps.name}</li>
 		</c:forEach>
