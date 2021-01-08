@@ -1,21 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
-<!DOCTYPE html>
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>     
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Edit Employee Form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Edit Customer</title>
 </head>
 <body>
-	<h1 style="color: blue">
-		Edit Employee Form
-	</h1>
-
-	<form action="save" method="post">
-		Emp No: <input type="text" name="id" value="${emp.getId()}" /><br> 
-		Emp	Name: <input type="text" name="name" value="${emp.name}" /><br> 
-		<input type="submit" value="Submit"/>
-	</form>
+    <div align="left">
+        <h2>Edit Customer</h2>
+        <form:form action="save" method="post" modelAttribute="editEmp">
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td>ID: </td>
+                    <td>${editEmp.id}
+                        <form:hidden path="id"/>
+                    </td>
+                </tr>       
+                <tr>
+                    <td>Name: </td>
+                    <td><form:input path="name" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Save"></td>
+                </tr>                   
+            </table>
+        </form:form>
+        <form:form action="/listemp" method="get">
+			<table border="0" cellpadding="5">
+				<tr>
+					<td colspan="2"><input type="submit" value="Cancel"></td>
+				</tr>
+			</table>
+		</form:form>
+    </div>
 </body>
 </html>
