@@ -30,8 +30,8 @@ public class EmployeeController {
 		Employee emp = new Employee();
 		/*
 		 * newemp: jsp end-point
-		 * form: name of the form in jsp
-		 * emp: oject
+		 * form: name will be used in jsp of the <object> 
+		 * emp: <object> passed to jsp
 		 * */
 		return new ModelAndView("newEmp","form", emp);
 	}
