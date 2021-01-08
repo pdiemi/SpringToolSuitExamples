@@ -2704,3 +2704,18 @@ Binding(CTRL+SHIFT+C,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-08 12:15:47.319
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-08 12:15:47.334
+!MESSAGE classpath=90 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-08 12:15:47.347
+!MESSAGE buffering callback sts4.classpath.FMYnrBkm springbootminiapp false 90
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-08 12:15:47.359
+!MESSAGE executing callback sts4.classpath.FMYnrBkm 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-08 12:15:47.379
+!MESSAGE executing callback sts4.classpath.FMYnrBkm SUCCESS [done]
