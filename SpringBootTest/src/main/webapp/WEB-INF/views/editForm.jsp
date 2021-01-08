@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Edit Customer</title>
+<title>Edit Employee</title>
 </head>
 <body>
     <div align="left">
-        <h2>Edit Customer</h2>
-        <form:form action="save" method="post" modelAttribute="editEmp">
+        <h2>Edit Employee</h2>
+        <form:form action="editemp" method="post" modelAttribute="editEmp">
             <table border="0" cellpadding="5">
                 <tr>
                     <td>ID: </td>

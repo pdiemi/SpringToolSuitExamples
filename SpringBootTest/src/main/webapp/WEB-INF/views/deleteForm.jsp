@@ -11,7 +11,7 @@
 <body>
 	<div align="left">
 		<h2>Delete Employee</h2>
-		<form:form action="save" method="post" modelAttribute="deleteEmp">
+		<form:form action="delete" method="post" modelAttribute="deleteEmp">
 			<table border="0" cellpadding="5">
 				<tr>
 					<td>ID:</td>
