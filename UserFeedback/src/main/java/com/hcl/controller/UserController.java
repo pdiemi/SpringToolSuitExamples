@@ -17,9 +17,9 @@ public class UserController {
 	@Autowired
 	private UserServiceInterface userService;
 
-	@GetMapping("/index")
-	public String index() {
-		return "index";
+	@GetMapping("/dashboard")
+	public String showDashBoard() {
+		return "dashboard";
 	}
 	
 	@GetMapping("/all-users")
