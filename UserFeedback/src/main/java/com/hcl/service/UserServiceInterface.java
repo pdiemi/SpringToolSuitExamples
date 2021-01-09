@@ -11,4 +11,5 @@ public interface UserServiceInterface {
 	public void addUser(User user);
 	public void updateUser(User user);
 	public void deleteUser(User user);
+	public boolean userExists(User user);
 }

@@ -42,4 +42,12 @@ public class UserService implements UserServiceInterface {
 		userDao.delete(user);
 	}
 
+	@Override
+	public boolean userExists(User user) {
+		if (userDao.existsById(user.getUserEmail())) {
+			return true;
+		}
+		return false;
+	}
+
 }

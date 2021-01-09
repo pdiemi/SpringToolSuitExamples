@@ -15,12 +15,12 @@ import lombok.NoArgsConstructor;
 public class User {
 
 	@Id 
-	@Column(name="email")
+	@Column(name="email", length=100)
 	private String userEmail;
 	@Column(name="password")
 	private String userPassword;
 	@Column(name="name")
 	private String userFullName;
 	@Column(name="country")
-	private String Country;
+	private String userCountry;
 }

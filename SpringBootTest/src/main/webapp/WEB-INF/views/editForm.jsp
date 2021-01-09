@@ -11,7 +11,7 @@
 <body>
     <div align="left">
         <h2>Edit Employee</h2>
-        <form:form action="editemp" method="post" modelAttribute="editEmp">
+        <form:form method="post" modelAttribute="editEmp">
             <table border="0" cellpadding="5">
                 <tr>
                     <td>ID: </td>

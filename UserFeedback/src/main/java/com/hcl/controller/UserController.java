@@ -36,8 +36,24 @@ public class UserController {
 
 	@PostMapping("/add-user")
 	public String addUser(User user) {
+		String errorMessage = "";
+		if(userService.userExists(user)) {
+			
+		}
 		userService.addUser(user);
-		return "redirect:/users";
+		return "redirect:/all-users";
 	}
 
+	@GetMapping("/edit-user")
+	public ModelAndView editUser() {
+		User userToEdit = new User();
+		return new ModelAndView("userEditForm","userToEdit",userToEdit);
+	}
+
+	@PostMapping("/edit-user")
+	public String editUser(User user) {
+		userService.updateUser(user);
+		return "redirect:/all-users";
+	}
+	
 }
