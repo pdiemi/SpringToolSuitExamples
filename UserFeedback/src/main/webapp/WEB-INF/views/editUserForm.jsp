@@ -6,25 +6,26 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Users</title>
+<title>Update User</title>
 </head>
 <body>
-	<a href="dashboard">Back to Dash Board</a>
-	<h1>Add New User</h1>
-	<form:form modelAttribute="newUser">
+	<a href="../dashboard">Back to Dash Board</a><br>
+	<h1>Update User</h1>
+	<a style="color:red">*User email cannot be changed</a><br>
+	<form:form modelAttribute="userToEdit">
 		<form:errors path="*" element="div" />
 		<div>
 			<table>
 				<tr>
+					<td><form:label path="userEmail">Email </form:label> 
+					<form:input path="userEmail" required="true" readonly="true"/> 
+					<form:errors path="userEmail" /></td>
+				</tr>
+				
+				<tr>
 					<td><form:label path="userFullName">Full Name </form:label> 
 					<form:input path="userFullName" required="true" /> 
 					<form:errors path="userFullName" /></td>
-				</tr>
-
-				<tr>
-					<td><form:label path="userEmail">Email </form:label> 
-					<form:input path="userEmail" required="true" /> 
-					<form:errors path="userEmail" /></td>
 				</tr>
 
 				<tr>
@@ -41,11 +42,15 @@
 				
 				<tr>
                		<td colspan = "2">
-               		<input type = "submit" value = "Add User"/></td>
+               		<input type = "submit" value = "Update User"/></td>
            		 </tr>
+           		 
 			</table>
 		</div>
 	</form:form>
+	<form action="../all-users" method="get">
+		<input type = "submit" value = "Cancel"/>
+	</form>
 
 </body>
 </html>
