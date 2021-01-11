@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://wsdemo" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://wsdemo" xmlns:intf="http://wsdemo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://wsdemo" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="greet">
+    <complexType>
+     <sequence>
+      <element name="message" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="greetResponse">
+    <complexType>
+     <sequence>
+      <element name="greetReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="calculateLeaves">
+    <complexType/>
+   </element>
+   <element name="calculateLeavesResponse">
+    <complexType>
+     <sequence>
+      <element name="calculateLeavesReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="calculateSalary">
+    <complexType>
+     <sequence>
+      <element name="salary" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="calculateSalaryResponse">
+    <complexType>
+     <sequence>
+      <element name="calculateSalaryReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="greetRequest">
+
+      <wsdl:part element="impl:greet" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="calculateSalaryResponse">
+
+      <wsdl:part element="impl:calculateSalaryResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="calculateSalaryRequest">
+
+      <wsdl:part element="impl:calculateSalary" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="calculateLeavesRequest">
+
+      <wsdl:part element="impl:calculateLeaves" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="calculateLeavesResponse">
+
+      <wsdl:part element="impl:calculateLeavesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="greetResponse">
+
+      <wsdl:part element="impl:greetResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Employee">
+
+      <wsdl:operation name="greet">
+
+         <wsdl:input message="impl:greetRequest" name="greetRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:greetResponse" name="greetResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="calculateLeaves">
+
+         <wsdl:input message="impl:calculateLeavesRequest" name="calculateLeavesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:calculateLeavesResponse" name="calculateLeavesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="calculateSalary">
+
+         <wsdl:input message="impl:calculateSalaryRequest" name="calculateSalaryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:calculateSalaryResponse" name="calculateSalaryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="EmployeeSoapBinding" type="impl:Employee">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="greet">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="greetRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="greetResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="calculateLeaves">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="calculateLeavesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="calculateLeavesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="calculateSalary">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="calculateSalaryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="calculateSalaryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="EmployeeService">
+
+      <wsdl:port binding="impl:EmployeeSoapBinding" name="Employee">
+
+         <wsdlsoap:address location="http://localhost:8080/wsdemoServer/services/Employee"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

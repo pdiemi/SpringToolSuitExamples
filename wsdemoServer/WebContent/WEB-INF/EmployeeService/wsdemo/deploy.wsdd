@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from EmployeeService WSDL service -->
+
+  <service name="Employee" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://wsdemo"/>
+      <parameter name="wsdlServiceElement" value="EmployeeService"/>
+      <parameter name="schemaQualified" value="http://wsdemo"/>
+      <parameter name="wsdlServicePort" value="Employee"/>
+      <parameter name="className" value="wsdemo.Employee"/>
+      <parameter name="wsdlPortType" value="Employee"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://wsdemo" xmlns:retNS="http://wsdemo" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="greet" qname="operNS:greet" returnQName="retNS:greetReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://wsdemo" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:message" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://wsdemo" xmlns:retNS="http://wsdemo" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="calculateLeaves" qname="operNS:calculateLeaves" returnQName="retNS:calculateLeavesReturn" returnType="rtns:int" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://wsdemo" xmlns:retNS="http://wsdemo" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="calculateSalary" qname="operNS:calculateSalary" returnQName="retNS:calculateSalaryReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://wsdemo" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:salary" type="tns:double"/>
+      </operation>
+      <parameter name="allowedMethods" value="calculateLeaves calculateSalary greet"/>
+
+  </service>
+</deployment>

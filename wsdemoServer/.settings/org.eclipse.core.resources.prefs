@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/wsdemo/Calc.java=UTF-8
+encoding//src/wsdemo/CalcService.java=UTF-8
+encoding//src/wsdemo/CalcServiceLocator.java=UTF-8
+encoding//src/wsdemo/CalcSoapBindingStub.java=UTF-8
