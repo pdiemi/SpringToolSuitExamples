@@ -32,8 +32,11 @@ public class UserService implements UserServiceInterface {
 	}
 
 	@Override
-	public void addUser(User user) {
-		userDao.save(user);
+	public User addUser(User user) {
+		if (userExists(user)) {
+			return null;
+		}
+		return userDao.save(user);
 	}
 
 	@Override
