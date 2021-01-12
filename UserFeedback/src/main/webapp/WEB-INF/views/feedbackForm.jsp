@@ -6,46 +6,50 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Users</title>
+<title>Add New Feedback</title>
 </head>
 <body>
 	<a href="dashboard">Back to Dash Board</a>
-	<h1>Add New User</h1>
-	<form:form modelAttribute="newUser">
+	<h1>Add New Feedback</h1>
+	<form:form modelAttribute="newFeedback">
 		<form:errors path="*" element="div" />
 		<div>
 			<table>
 				<tr>
-					<td><form:label path="userFullName">Full Name </form:label> 
-					<form:input path="userFullName" required="true" /> 
-					<form:errors path="userFullName" /></td>
+					<td><form:label path="feedbackText">Feedback Text </form:label> 
+					<form:input path="feedbackText" required="true" /> 
+					<form:errors path="feedbackText" /></td>
 				</tr>
 
 				<tr>
-					<td><form:label path="userEmail">Email </form:label> 
-					<form:input path="userEmail" required="true" /> 
-					<form:errors path="userEmail" /></td>
+					<td><form:label path="feedbackRating">Rating </form:label> 
+					<form:input path="feedbackRating" required="true" /> 
+					<form:errors path="feedbackRating" /></td>
 				</tr>
 
 				<tr>
-					<td><form:label path="userCountry">Country </form:label> 
-					<form:input path="userCountry" required="true" /> 
-					<form:errors path="userCountry" /></td>
-				</tr>
-
-				<tr>
-					<td><form:label path="userPassword">Password </form:label> 
-					<form:input path="userPassword" required="true" type="password" /> 
-					<form:errors path="userPassword" /></td>
+					<td><form:label path="user">User </form:label> 
+					<form:input path="user" required="true" /> 
+					<form:errors path="user" /></td>
 				</tr>
 				
 				<tr>
                		<td colspan = "2">
-               		<input type = "submit" value = "Add User"/></td>
+               		<input type = "submit" value = "Submit"/></td>
            		 </tr>
 			</table>
 		</div>
 	</form:form>
+	
+	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script
+		src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
+	<script>
+		$('#feedbackDate').datepicker({
+			format : 'dd/mm/yyyy'
+		});
+	</script>
 
 </body>
 </html>
