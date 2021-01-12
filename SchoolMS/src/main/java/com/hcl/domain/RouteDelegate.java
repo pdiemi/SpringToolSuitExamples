@@ -8,20 +8,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class StudentDelegate {
+public class RouteDelegate {
 
 	@Autowired
-	RestTemplate restTemplate;
+	RestTemplate routeRestTemplate;
 
-	public String callStudent(String schoolName) {
-		String response = restTemplate.exchange("http://localhost:8080/students/{schoolName}", HttpMethod.GET, null,
+	public String callRoute(String schoolName) {
+		String response = routeRestTemplate.exchange("http://localhost:9090/routes/{schoolName}", HttpMethod.GET, null,
 				new ParameterizedTypeReference<String>() {
 				}, schoolName).getBody();
 		return "normal flow" + response;
 	}
 	
 	@Bean
-	public RestTemplate restTemplate() {
+	public RestTemplate routeRestTemplate() {
 		return new RestTemplate();
 	}
 }
