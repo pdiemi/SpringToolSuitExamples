@@ -15,26 +15,32 @@ import com.hcl.domain.Student;
 public class StudentService {
 
 	private static Map<String, List<Student>> schooldb = new HashMap<>();
-	
+
 	static {
-		//schooldb = new HashMap<>();
+		// schooldb = new HashMap<>();
 		List<Student> list = new ArrayList<>();
-		
+
 		list.add(new Student("amar", "class 1"));
 		list.add(new Student("diemi", "class 2"));
-		
+
 		schooldb.put("abcschool", list);
 	}
-	
+
 	@RequestMapping("/students/{schoolName}")
 	public List<Student> getStudents(@PathVariable String schoolName) {
-		List<Student> studentList = schooldb.get(schoolName);
-		
-		if (studentList == null) {
-			studentList = new ArrayList<>();
-			Student student = new Student("Not found", "NA");
-			studentList.add(student);
+		List<Student> studentList = null;
+		try {
+			Thread.sleep(1000);
 			
+			studentList = schooldb.get(schoolName);
+			if (studentList == null) {
+				studentList = new ArrayList<>();
+				Student student = new Student("Not found", "NA");
+				studentList.add(student);
+
+			}
+		} catch (Exception e) {
+
 		}
 		return studentList;
 	}
