@@ -40,12 +40,12 @@ public class FeedbackController {
 		return (List<Feedback>) feedbackDao.saveAll(allFeedbacks);
 	}
 
-	@GetMapping("/feedbacks/{id}")
+	@GetMapping("/feedbacks/id/{id}")
 	public Feedback getFeedback(@PathVariable int id) {
 		return feedbackDao.findById(id).get();
 	}
 
-	@GetMapping("/feedbacks/{user}")
+	@GetMapping("/feedbacks/user/{user}")
 	public List<Feedback> getFeedbackByUser(@PathVariable String user) {
 		List<Feedback> allFeedbacks = (List<Feedback>) feedbackDao.findAll();
 		List<Feedback> feedbacks = new ArrayList<>();
