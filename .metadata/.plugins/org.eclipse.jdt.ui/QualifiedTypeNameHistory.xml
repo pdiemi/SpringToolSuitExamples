@@ -42,4 +42,6 @@
     <fullyQualifiedTypeName name="com.hcl.model.User"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
 </qualifiedTypeNameHistroy>
