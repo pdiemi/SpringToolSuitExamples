@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,8 +28,10 @@ public class Task {
 	@Column(name="name")
 	private String taskName;
 	@Column(name="startdate")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date taskStartDate;
 	@Column(name="enddate")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date taskEndDate;
 	@Column(name="description")
 	private String taskDescription;

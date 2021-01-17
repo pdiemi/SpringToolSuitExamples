@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1>Error</h1>
-    <p class="error">${message} Please try again.</p><br><br>
+    <p class="error">${message} <br> Please try again.</p><br><br>
     <a href="..">Back to Home</a><br>
 
 </body>
