@@ -25,9 +25,9 @@ public class Task {
 	private int taskId;
 	@Column(name="name")
 	private String taskName;
-	@Column(name="start-date")
+	@Column(name="startdate")
 	private Date taskStartDate;
-	@Column(name="end-date")
+	@Column(name="enddate")
 	private Date taskEndDate;
 	@Column(name="description")
 	private String taskDescription;

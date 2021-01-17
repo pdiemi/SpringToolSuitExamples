@@ -22,14 +22,14 @@ public class UserController {
 	}
 
 	@PostMapping("/register")
-	public ModelAndView register(User newUser) {
+	public ModelAndView register(User user) {
 		ModelAndView mv = new ModelAndView("welcome");
-		if (userDao.existsById(newUser.getUserEmail())) {
-			return new ModelAndView("registerFail", "message",
-					"A user associated with email " + newUser.getUserEmail() + " already exists.");
+		if (userDao.existsById(user.getUserEmail())) {
+			return new ModelAndView("error", "message",
+					"A user associated with email " + user.getUserEmail() + " already exists.");
 		} else {
-			userDao.save(newUser);
-			mv.addObject("newUser", newUser);
+			userDao.save(user);
+			mv.addObject("user", user);
 		}
 		return mv;
 	}
@@ -44,12 +44,16 @@ public class UserController {
 	public ModelAndView login(User login) {
 		ModelAndView mv = new ModelAndView("welcome");
 		if (!userDao.existsById(login.getUserEmail())) {
-			return new ModelAndView("registerFail", "message",
+			return new ModelAndView("error", "message",
 					"User associated with email " + login.getUserEmail() + " does not exist.");
 		} else {
 			User user = userDao.getOne(login.getUserEmail());
-			if (user.getPassword() != login.getPassword()) {
-				return new ModelAndView("registerFail", "message", "Username or password is incorrect.");
+			if (!user.getPassword().equals(login.getPassword())) {
+				//return new ModelAndView("error", "message", "Username or password is incorrect.");
+				String usr = user.getUserEmail()+" "+user.getPassword();
+				String log =login.getUserEmail()+" "+login.getPassword();
+				String message = usr + " / " +log;
+				return new ModelAndView("error", "message", message);
 			} else {
 				mv.addObject("user", user);
 			}

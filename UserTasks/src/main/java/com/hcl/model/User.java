@@ -17,9 +17,9 @@ import lombok.ToString;
 public class User {
 
 	@Id
-	@Column(name="email")
+	@Column(name="email", length=100)
 	private String userEmail;
 	private String password;
-	@Column(name="full-name")
+	@Column(name="fullname")
 	private String userFullName;
 }
