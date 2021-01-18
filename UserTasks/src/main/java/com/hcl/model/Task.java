@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -39,4 +40,6 @@ public class Task {
 	private String taskSeverity;
 	@Column(name="user")
 	private String taskEmail;
+	@Transient
+	private User user;
 }

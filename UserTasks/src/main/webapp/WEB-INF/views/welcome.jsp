@@ -3,13 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <meta charset="ISO-8859-1">
 <title>Welcome</title>
 </head>
 <body>
-    <h1>Welcome</h1>
-    <p>Welcome ${user.getUserFullName()}.</p><br>
-    <a href="dashboard">Dash Board</a>
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Welcome ${user.getUserFullName()}.</p><br>
+        <a href="../${user.getUserEmail()}/all-tasks">Dash Board</a>
+    </div>
+    
 
 </body>
 </html>
